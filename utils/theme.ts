@@ -74,8 +74,26 @@ export let theme = createTheme({
         }
       ],
       
-    }
-  }
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          paddingInline: 2,
+        }
+      },
+      variants: [
+        {
+          props: {color: 'secondary'},
+          style: {
+            backgroundColor: '#142850',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: 16
+          },
+        },
+      ],
+    },
+  },
 });
  
 // 1 cach de dynamic thay doi fontSize ma MUI supported: https://mui.com/material-ui/customization/typography/#responsive-font-sizes

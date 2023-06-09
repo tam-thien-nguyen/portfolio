@@ -2,7 +2,7 @@ import { MainLayout } from '@/components/layout'
 import { Box } from '@mui/material'
 import { useRouter } from 'next/dist/client/router'
 import { NextPageWithLayout } from '../models'
-import { HeroSection } from '@/components/home'
+import { FeatureWork, HeroSection } from '@/components/home'
 import { RecentPosts } from '@/components/home/recent-posts'
 
 // Layout: khai bao 1 custom Layout. Custom Layout = NextPage + ten layout 
@@ -22,8 +22,8 @@ const Home: NextPageWithLayout = () => {
 	return (
 		<Box>
 			<HeroSection />
-
 			<RecentPosts/>
+			<FeatureWork/>
 		</Box>
 	)
 }

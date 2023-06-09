@@ -1,4 +1,4 @@
-import { Post } from '@/models/index';
+import { Post } from '@/models';
 import { Box, Container, Link as MuiLink, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 import { PostCard } from './post-card';
@@ -24,7 +24,7 @@ export function RecentPosts () {
 
 
   return (
-    <Box component='section' bgcolor='secondary.light' pt={2}   pb={4}> 
+    <Box component='section' bgcolor='secondary.light' pt={2} pb={4}> 
         <Container>
             <Stack direction='row' mb={2} justifyContent={{xs: 'center', md: 'space-between'}} alignItems='center'>
                 <Typography variant='h6'>Recent Posts</Typography>

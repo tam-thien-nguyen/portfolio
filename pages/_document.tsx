@@ -1,5 +1,5 @@
 import { AppPropsWithLayout } from '@/models/common';
-import { createEmotionCache, roboto, theme } from '@/utils/index';
+import { createEmotionCache, roboto, theme } from '@/utils';
 import createEmotionServer from '@emotion/server/create-instance';
 import { AppType } from 'next/app';
 import Document, {
