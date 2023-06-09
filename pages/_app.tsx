@@ -13,11 +13,11 @@ const clientSideEmotionCache = createEmotionCache();
 
 // Setup goi Layout ra cho tat ca pages. Moi page nhu Home, about, post neu co dinh nghia Layout thi no se sai layout do
 // Neu ko thi EmptyLayout se dc sai
-function MyApp({ Component,emotionCache = clientSideEmotionCache, pageProps }: AppPropsWithLayout) {
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const Layout = Component.Layout ?? EmptyLayout
 
   return( 
-    <CacheProvider value={emotionCache}>
+    <CacheProvider value={clientSideEmotionCache}>
         <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />

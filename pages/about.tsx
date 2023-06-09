@@ -1,5 +1,6 @@
 // import Header from '@/components/header';
 import { AdminLayout, MainLayout } from '@/components/layout';
+import { Box, Button, Typography } from '@mui/material';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -10,7 +11,7 @@ import { useEffect, useState } from 'react';
 const Header = dynamic(() => import('@/components/header'), {ssr: false})
 
 
-export interface  AboutPageProps {
+export interface AboutPageProps {
 }
 
 export default function AboutPage (props:  AboutPageProps) {
@@ -44,16 +45,22 @@ export default function AboutPage (props:  AboutPageProps) {
   console.log('About Query:', router.query);
 
   return (
-    <div>
-      <h1>About paggeeee</h1>
-      <Header/>
+    <Box>
+        <Typography component='h1' variant='h3' color='primary.main'>About paggeeee</Typography>
 
-      <ul className='post-list'>
-        {postList.map((post: any) => <li key={post.id}> {post.title}</li>)}
-      </ul>
+        <Button variant="outlined" color="primary">
+          Testing
+        </Button>
 
-      <button onClick={handleNextClick}></button>
-    </div>
+        <Header/>
+
+        <ul className='post-list'>
+          {postList.map((post: any) => <li key={post.id}> {post.title}</li>)}
+        </ul>
+
+        <button onClick={handleNextClick}></button>
+    </Box>
+    
   );
 }
 
