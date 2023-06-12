@@ -25,8 +25,8 @@ const Home: NextPageWithLayout = () => {
 			<Seo data={{
 				title:'Tam Nguyen Portfolio',
 				description:'Highly skilled and innovative IT professional with a proven track record in software development. Proficient in Nodejs, Nextjs, docker, Scrum, Micro services. Strong problem-solving abilities with a keen eye for detail. Excellent communication and teamwork skills, enabling effective collaboration with diverse stakeholders. Passionate about staying up-to-date with the latest industry trends and advancements. Committed to delivering high-quality solutions to drive business growth and optimize operational efficiency.',
-				thumbnailUrl:'',
-				url:''
+				thumbnailUrl:'https://res.cloudinary.com/dwjea9rmo/image/upload/v1686573032/nextjs/u1qepkpib8npkpbdlnar.png',
+				url:'https://nextjs-khaki-one-24.vercel.app/'
 			}}/>
 			
 
