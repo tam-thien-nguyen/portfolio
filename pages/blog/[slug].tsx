@@ -15,6 +15,7 @@ import remarkToc from 'remark-toc';
 import { unified } from 'unified';
 import Script from 'next/script'
 import { Seo } from '@/components/common/seo';
+import { MainLayout } from '@/components/layout';
 
 export interface BlogPageProps {
   post: Post
@@ -48,16 +49,12 @@ export default function BlogPageProps ({post}: BlogPageProps) {
           <h1>Post Detail page</h1>
           <p>{post.title}</p>
           <p>{post.author?.name}</p>
-          <p>{post.description}</p>
-
-          <p>{post.mdContent}</p>
 
           <Divider/>
 
-          <div dangerouslySetInnerHTML={{ __html: post.htmlContent || ''}}></div>
+          <div dangerouslySetInnerHTML={{ __html: post.htmlContent || ''}}></div>  
       </Container>
 
-      
       <Script src='/prism.js' strategy='afterInteractive'></Script>
     </Box>
   )
@@ -106,4 +103,6 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (context: Get
   }
 } 
 
+
+BlogPageProps.Layout = MainLayout
 
