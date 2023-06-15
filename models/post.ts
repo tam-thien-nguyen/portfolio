@@ -13,6 +13,7 @@ export interface Post {
     description: string
 
     slug: string
+    thumbnailUrl?: string
     author?: Author
 
     mdContent?: string

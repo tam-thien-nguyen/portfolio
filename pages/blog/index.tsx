@@ -7,9 +7,10 @@ import { getPostList } from '@/utils/post';
 import { MainLayout } from '@/components/layout';
 import { Box, Container, Divider } from '@mui/material';
 import { PostItem } from '@/components/blog';
+import { Post } from '@/models';
 
 export interface BlogListProps {
-   posts: any[]
+   posts: Post[]
 }
 
 export default function BlogListPage ({posts}: BlogListProps) {

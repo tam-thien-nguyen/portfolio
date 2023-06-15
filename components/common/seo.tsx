@@ -19,7 +19,7 @@ export function Seo ({data}: SeoProps) {
 
   return (
     <Head>    
-        <title>Tam Nguyen PortFolio</title>
+        <title>{title}</title>
         <meta name="title" content={title}/>
         <meta name="description" content={description}/>
        
