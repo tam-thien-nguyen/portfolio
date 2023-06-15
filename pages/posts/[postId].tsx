@@ -35,12 +35,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: data.data.map((post: any) => ({params: {postId: post.id}})),
-    fallback: false
+    fallback: true
   }
 }
 
 // revalidate: 5 => la sau 5 giay khi user request page no se van tra ve gia tri cu trong cache va in background update gia tri moi.
 // o lan ke tiep khi user request lai se nhan dc gia tri moi. Vi da dc update len cache o lan truoc roi.
+// Neu co revalidate thi la ISR
 export const getStaticProps: GetStaticProps<PostPageProps> = async (context: GetStaticPropsContext) => {
   const postId = context.params?.postId
 
